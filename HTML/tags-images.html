@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HTML</title>
+    </head>
+    <body>
+        <!-- A tag a representa uma âncora, que representa um hyperlink atribuído ao conteúdo dentro da tag a -->
+        <a href="">
+            <!-- A tag img é responsável por definir um elemento de imagem -->
+            <img src="" alt="">
+        </a>
+        
+        <img src="" alt="">
+        <!-- A tag map, quando usada com a tag img e tags area filhas, define que a imagem poderá ser mapeada com coordenadas, permitindo adicionar interatividade a determinadas partes da mesma -->
+        <map name="">
+            <!-- A tag area permite definir o comportamento de determinada parte da imagem mapeada, seja para atribuir um hyperlink a esta área ou uma área "morta" dentro da imagem -->
+            <area shape="" coords="" href="" alt="">
+            <area shape="" coords="" href="" alt="">
+            <area shape="" coords="" href="" alt="">
+        </map>
+        
+        <!-- A tag picture permite adicionar várias opções de imagem para que os navegadores renderizem de acordo com a largura do dispositivo -->
+        <picture>
+            <!-- A tag source permite especificar múltiplas alternativas de recursos de mídia para elementos de mídias. -->
+            <source media="(min-width: )" srcset="">
+            <source media="(min-width: )" srcset="">
+            <img src="" alt="">
+        </picture>
+        
+        <!-- A tag iframe permite incorporar o conteúdo de uma página em outra -->
+        <iframe width="420" height="315" src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1"></iframe>
+        
+        <!-- A tag canvas é destinada a delimitar uma área para renderização dinâmica de gráficos -->
+        <canvas id="myCanvas" width="200" height="100"></canvas>
+                
+        <!-- A tag video representa um elemento de vídeo, filme ou áudio com legendas -->
+        <video width="320" height="240" controls>
+            <source src="movie.mp4" type="video/mp4">
+            <source src="movie.ogg" type="video/ogg">
+            Your browser does not support the video tag.
+        </video>
+        
+        <!-- A tag audio representa um elemento de som ou áudio -->
+        <audio controls>
+            <source src="horse.ogg" type="audio/ogg">
+            <source src="horse.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        
+        <!-- A tag object pode representar um recurso externo que pode ser tratado com uma imagem ou como um recurso externo a ser processado por um plugin -->
+        <object width="100%" height="500px" data="snippet.html"></object>
+        
+        <!-- A tag embed é responsável por um elemento de integração para uma aplicação externa ou conteúdo interativo. -->
+        <embed width="100%" height="500px" src="snippet.html">
+    </body>
+</html>

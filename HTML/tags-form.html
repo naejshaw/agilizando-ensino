@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HTML</title>
+    </head>
+    <body>
+        <!-- A tag form define um formulário -->
+        <form action="">
+            <!-- A tag label gera um título associado a um elemnto de um formulário -->
+            <label for="name">Name</label>
+            <!-- A tag input gera um campo de dados de um formulário -->
+            <!-- O type text permite inserir textos curtos -->
+            <input type="text" id="name">
+            <br>
+            <label for="human">Humano</label>
+            <!-- O type radio permite campos de seleção única -->
+            <input type="radio" id="human">
+            <br>
+            <label for="alive">Está vivo?</label>
+            <!-- O type checkbox permite campos de seleção múltipla -->
+            <input type="checkbox" id="alive">
+            <br>
+            <label for="message">Mensagem</label>
+            <input type="text" id="message">
+            <!--  -->
+            <input type="submit">
+        </form>
+        <br>
+        <form>
+            <label for="">Estado</label>
+            <!-- A select select gera uma lista restrita de seleção. Esta não permite o recurso de autocompletar -->
+            <select name="estados" id="">
+                <!-- A tag option fornece as opções da lista -->
+                <option value="">Rio de Janeiro</option>
+                <option value="">São Paulo</option>
+                <option value="">Minas Gerais</option>
+                <option value="">Espírito Santo</option>
+                <option value="">Goiás</option>
+            </select>
+        </form>
+        <br>
+        <form>
+            <label for="comment">Comentário</label>
+            <!-- A tag textarea permite inserir textos longos -->
+            <textarea name="" id="comment"></textarea>
+            
+            <!-- A tag button gera um botão de ação. Não se restringe o seu uso aos formulários, podendo ser utilizada em outros locais do site -->
+            <button type="submit">Enviar</button>
+            <button type="reset">Limpar</button>
+        </form>
+        <br>
+        <form action="">
+            <!-- Gera uma área definida -->
+            <fieldset>
+                <!-- Gera uma legenda para a área definida -->
+                <legend>Teste</legend>
+                <label for="">Email</label>
+                <input type="email">
+                <label for="">Senha</label>
+                <input type="password">
+                <input type="submit">
+            </fieldset>
+        </form>
+        <br>
+        <form>
+            <label for="">Navegadores</label>
+            <input list="browsers">
+            <!-- A datalist select gera uma lista não restrita de seleção. Esta permite o recurso de autocompletar -->
+            <datalist id="browsers">
+                <option value="Edge">
+                <option value="Firefox">
+                <option value="Chrome">
+                <option value="Opera">
+                <option value="Safari">
+            </datalist>
+        </form>
+    </body>
+</html>
