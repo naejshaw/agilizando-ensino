@@ -1,0 +1,35 @@
+/*Para realizar a estilização de páginas, podemos utilizar o css.
+
+Existem 3 formas de aplicar o css em um documento html
+
+- Colocando o código css dentro de uma tag style no head d arquivo HTML;
+- Passando o atributo style dentro do elemento html que se deseja estilizar;
+- Criando um arquivo styles.css externo e realizando o link entre o arquivo html e o arquivo css;*/
+
+/*Por questões de boas práticas, buscamos adotar a terceira forma.*/
+
+/*Para definir uma estilização padrão, se usa o seletor * que representa o seletor universal, o que significa que a estilização dentro de {} será aplicada para todos os elementos da página*/
+*{
+    color: bisque;    
+}
+
+/*Para estilizar todos os elementos de um mesmo tipo, se usa o seletor com o nome do tipo do elemento. Por exemplo, se usarmos p{}, a estilização dentro de {} será aplicada para todos os elementos p da página*/
+body{
+    color: bisque;
+}
+
+/*Para estilizar todos os elementos de uma mesma classe, se usa o seletor "." antes do nome da classe. Por exemplo, se usarmos .menu{}, a estilização dentro de {} será aplicada para todos os elementos com a classe menu da página*/
+.class{
+    color: rgb(182, 61, 25);
+}
+
+/*Para estilizar um elemento específico da página, se usa o seletor "#" antes do nome de id do elemento. Por exemplo, se usarmos #banana, a estilização dentro de {} será aplicada para o elemento com id banana*/
+#id{
+    color: rgb(185, 5, 161);
+}
+
+/*Se houver alguma estilização em comum a vários elementos, podemos reescrever o código acima da seguinte forma*/
+
+body, .class, #id{
+    color: rgb(47, 187, 29);
+}
