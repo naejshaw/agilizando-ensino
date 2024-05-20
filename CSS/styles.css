@@ -1,12 +1,15 @@
 /*Para realizar a estilização de páginas, podemos utilizar o css.
+Cascading Style Sheets, ou CSS, indica, ao traduzir, que será feita a leitura em cascata. Isso significa que a última estilização de um determinado elemento é a que irá prevalecer.
+
 
 Existem 3 formas de aplicar o css em um documento html
 
-- Colocando o código css dentro de uma tag style no head d arquivo HTML;
-- Passando o atributo style dentro do elemento html que se deseja estilizar;
-- Criando um arquivo styles.css externo e realizando o link entre o arquivo html e o arquivo css;*/
-
+- Internal: Colocando o código css dentro de uma tag style no head d arquivo HTML;
+- Inline: Passando o atributo style dentro do elemento html que se deseja estilizar;
+- External: Criando um arquivo styles.css externo e realizando o link entre o arquivo html e o arquivo css;*/
 /*Por questões de boas práticas, buscamos adotar a terceira forma.*/
+/*Dadas as três formas, existe uma ordem de prioridade em relação à estilização
+Caso exista mais de uma estilização para um determinado elemento, a estilização que será priorizada é a Inline. Após esta, será priorizada a última estilização declarada dentro do head, seja ela Internal(dentro da tag style) ou external(conecataa através da tag link). E em último lugar será aplicada a estilização do navegador*/
 
 /*Para definir uma estilização padrão, se usa o seletor * que representa o seletor universal, o que significa que a estilização dentro de {} será aplicada para todos os elementos da página*/
 *{
@@ -29,7 +32,12 @@ body{
 }
 
 /*Se houver alguma estilização em comum a vários elementos, podemos reescrever o código acima da seguinte forma*/
-
 body, .class, #id{
     color: rgb(47, 187, 29);
+}
+
+/*É possível ainda realizar estilizações com um direcionamento específico*/
+/*A estilização abaixo irá ser aplicada a todos os elementos a dentro de um elemento li que esteja dentro de uma lista ul. Esta prática pode ser aplicada em projetos menores onde não seja necessária a aplicação de classes. Contudo, a mesma estilização poderia ser feita através do uso de classes, por exemplo ul-li-a(de forma mais simplória) ou anchors-ul-items, para indicar de qual tipo de elemento a classe se refere.*/
+ul li a{
+    cursor: pointer;
 }
