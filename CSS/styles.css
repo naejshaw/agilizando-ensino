@@ -52,7 +52,6 @@ p{
     /*Define a cor da decoração do texto, quando esta existir*/
     text-decoration-color: yellowgreen;
 }
-/**/
 /*Background: Podemos estilizar o background de um elemento através de seis propriedades.*/
 p{
     /*Define a cor de fundo do elemento*/
@@ -68,3 +67,162 @@ p{
     /*Uma definição que agrupa as anteriores na seguinte ordem ->color->image->repeat->attachment->position. Não é necessário utilizar todas as anteriores */
     background: aquamarine url() no-repeat fixed center;
 }
+/*Border: Podemos definir a borda de um elemento das seguintes formas*/
+div{
+    /*Define a largura da borda*/
+    border-width: 2px;
+    /*Define o estilo da borda */
+    border-style: dotted;
+    /*Define a cor da borda */
+    border-color: yellowgreen;
+    /*Uma definição que agrupa as anteriores é a border, onde o style é obrigatório*/
+    border: 5px solid green;
+    /*Define o aredondamento da borda*/
+    border-radius: 5px;
+}
+/*Margin: usada para criar um espaço ao redor dos elementos, fora de qualquer borda definida*/
+p {
+    /*Define margem superior*/
+    margin-top: 25px;
+    /*Define a margem à direita*/
+    margin-right: 50px;
+    /*Define a margem inferior*/
+    margin-bottom: 75px;
+    /*Define a margem à esquerda*/
+    margin-left: 100px;
+    /*Define a margem em uma só propriedade, na ordem top->right->bottom->left*/
+    margin: 25px 50px 75px 100px;
+    /*Define a margem em uma só propriedade, na ordem vertical->horizontal*/
+    margin: 25px 50px /*se usarmos o valor auto irá centralizar horizontalmente o elemento*/;
+  }
+/*Padding: usada para criar um espaço ao redor dos elementos, dentro de qualquer borda definida*/
+p {
+    /*Define um preenchimento superior*/
+    padding-top: 25px;
+    /*Define um preenchimento à direita*/
+    padding-right: 50px;
+    /*Define um preenchimento inferior*/
+    padding-bottom: 75px;
+    /*Define um preenchimento à esquerda*/
+    padding-left: 100px;
+    /*Define um preenchimento em uma só propriedade, na ordem top->right->bottom->left*/
+    padding: 25px 50px 75px 100px;
+    /*Define um preenchimento em uma só propriedade, na ordem vertical->horizontal*/
+    padding: 25px 50px ;
+  }
+/*Height e Width: usadas para definir a altura e a largura do elemento, respectivamente*/
+div {
+    height: 100px;
+    width: 500px;
+    /*Define a largura máxima que o elemento pode alcançar*/
+    max-width: max-content;
+  }
+/*Outline: usado para desenhar uma linha ao redor dos elementos, fora das bordas, para destacar os elementos. Não é considerado parte do elemento, podendo sobrepor outros elementos*/
+div{
+    /*Define o estilo da linha externa */
+    outline-style: dotted;
+    /*Define a largura da linha externa*/
+    outline-width: thin;
+    /*Define a cor da linha externa */
+    outline-color: antiquewhite;
+    /*Uma definição que agrupa as anteriores é a outline, onde o style é obrigatório*/
+    outline: double thick crimson;
+    /*Adiciona um espaço entre uma linha externa e a borda de um elemento.*/
+    outline-offset: unset;
+}
+/*Texts: existem algumas propriedades para formatar textos*/
+p{
+    /*Define a cor do texto*/
+    color: white;
+    /*Define o alinhamento do texto*/
+    text-align: center;
+    /*Define uma linha de decoração para o texto*/
+    text-decoration: wavy;
+    /*Define se as letras serão minúsculas, maiúsculas ou se todas as palavras terão apenas a primeira letra em maiúsculo*/
+    text-transform: capitalize;
+    /*Define o espaçamento entre as letras*/
+    letter-spacing: 2px;
+    /*Define o espaçamento entre as linhas*/
+    line-height: 2px;
+    /*Define o sombreamento do texto*/
+    text-shadow: 2px 2px;
+}
+/*Fonts: existem algumas propriedades para formatas as fonts dos texto*/
+p{
+    /*Define a família da fonte a ser utilizada*/
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /*Define o tamanho da fonte*/
+    font-size: medium;
+    /*Define o peso da fonte*/
+    font-weight: lighter;
+    font-style: italic;
+    /*Podemos agrupar as definições através da propriedade font, onde size e family são obrigatórios*/
+    font: italic small-caps bold 12px/30px Georgia, serif;
+}
+/*Links: podemos estilizar os links do site de um modo geral, usando o seletor a. Ou de acordo com o estado do link*/
+a{
+    color: blue;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background: turquoise;
+}
+/* link não acessado */
+a:link {
+    color: red;
+  }
+  
+  /* link acessado */
+  a:visited {
+    color: green;
+  }
+  
+  /* mouse sobre o link */
+  a:hover {
+    color: hotpink;
+  }
+  
+  /* link selecionado */
+  a:active {
+    color: blue;
+  }
+/*Lists: podemos estilizar os marcados das listas ordenadas e não ordenadas, assim como configurar uma imagem para ser o marcador, configurar uma cor de fundo ou mesmo o posicionamento dos marcadores*/
+ul.a {
+    /*Define o estilo do marcador*/
+    list-style-type: circle;
+    /*Define o posicionamento do marcador*/
+    list-style-position: outside;
+    /*Define a cor de fundo do elemento */
+    background: #ffe5e5;
+    /*Define a imagem do marcador*/
+    list-style-image: url('sqpurple.gif');
+}  
+ol.c {
+    /*Define o estilo do marcador*/
+    list-style-type: upper-roman;
+    /*Define o posicionamento do marcador*/
+    list-style-position: inside;
+    /*Define a cor de fundo do elemento */
+    background: #3399ff;
+}
+ul {
+    /*Define as propriedades em uma única linha */
+    list-style: square inside url("sqpurple.gif");
+}
+/*Tables*/
+/*Display*/
+/*Position*/
+/*Z-Index*/
+/*Overflow*/
+/*Float*/
+/*Inline-Block*/
+/*Align*/
+/*Opacity*/
+/*Navigation Bar*/
+/*Dropdowns*/
+/*Forms*/
+/*Counters*/
+/*Units*/
+/*!important*/
+/**/
+/**/
+/**/
+/**/
