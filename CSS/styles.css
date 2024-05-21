@@ -41,3 +41,30 @@ body, .class, #id{
 ul li a{
     cursor: pointer;
 }
+/*Cores: Podemos definir o valor da cor desejada de várias formas, utilizando o código rgb, o código rgba, o código hexadecimal, o código hsl e o código hsla. Existem diversas propriedades responsáveis pela estilização de cores. As mais comuns são*/
+p{
+    /*Define a cor do texto (ou em alguns casos do conteúdo do elemento)*/
+    color: aliceblue;
+    /*Define a cor da borda do elemento, quando esta existir*/
+    border-color: brown;
+    /*Define a cor de fundo do elemento*/
+    background-color: aquamarine;
+    /*Define a cor da decoração do texto, quando esta existir*/
+    text-decoration-color: yellowgreen;
+}
+/**/
+/*Background: Podemos estilizar o background de um elemento através de seis propriedades.*/
+p{
+    /*Define a cor de fundo do elemento*/
+    background-color: aquamarine;
+    /*Define imagem de fundo do elemento*/
+    background-image: url();
+    /*Define como será a repetição da imagem de fundo*/
+    background-repeat: no-repeat;
+    /*Define se a imagem de fundo irá acompanhar o scroll da página ou se será fixada*/
+    background-attachment: fixed;
+    /*Define a posição da imagem de fundo*/
+    background-position: center;
+    /*Uma definição que agrupa as anteriores na seguinte ordem ->color->image->repeat->attachment->position. Não é necessário utilizar todas as anteriores */
+    background: aquamarine url() no-repeat fixed center;
+}
