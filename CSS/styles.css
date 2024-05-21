@@ -11,6 +11,8 @@ Existem 3 formas de aplicar o css em um documento html
 /*Dadas as três formas, existe uma ordem de prioridade em relação à estilização
 Caso exista mais de uma estilização para um determinado elemento, a estilização que será priorizada é a Inline. Após esta, será priorizada a última estilização declarada dentro do head, seja ela Internal(dentro da tag style) ou external(conecataa através da tag link). E em último lugar será aplicada a estilização do navegador*/
 
+/*!important: é usado para adicionar mais importancia a uma propriedade/valor do que o normal.*/
+
 /*Para definir uma estilização padrão, se usa o seletor * que representa o seletor universal, o que significa que a estilização dentro de {} será aplicada para todos os elementos da página*/
 *{
     color: bisque;    
@@ -29,6 +31,18 @@ body{
 /*Para estilizar um elemento específico da página, se usa o seletor "#" antes do nome de id do elemento. Por exemplo, se usarmos #banana, a estilização dentro de {} será aplicada para o elemento com id banana*/
 #id{
     color: rgb(185, 5, 161);
+}
+
+/*No CSS, existem algumas pseudo-classes que representam um estado especial do elemento*/
+seletor:pseudo-classe{
+    /* As  pseudo-classes são indicadas por ":"*/
+    color: #3399ff;
+}
+
+/*No CSS, existem alguns pseudo-elementos que representam uma parte específica de um elemento ou a inserção de um novo elemento*/
+seletor::pseudo-elemento{
+    /* As  pseudo-classes são indicadas por "::"*/
+    color: #3399ff;
 }
 
 /*Se houver alguma estilização em comum a vários elementos, podemos reescrever o código acima da seguinte forma*/
@@ -207,21 +221,161 @@ ul {
     /*Define as propriedades em uma única linha */
     list-style: square inside url("sqpurple.gif");
 }
-/*Tables*/
-/*Display*/
-/*Position*/
-/*Z-Index*/
-/*Overflow*/
-/*Float*/
-/*Inline-Block*/
-/*Align*/
-/*Opacity*/
-/*Navigation Bar*/
-/*Dropdowns*/
-/*Forms*/
-/*Counters*/
-/*Units*/
-/*!important*/
+/*Tables: podemos estilizar as tabelas utilizando as seguintes propriedades*/
+table, th, td{
+    /*Define a borda do elemento*/
+    border: 1px solid;
+}
+table{
+    /*Define a largura do elemento*/
+    width: 100%;
+}
+th{
+    /*Define a altura do elemento*/
+    height: 70px;
+}
+td{
+    /*Define o alinhamento horizontal do texto*/
+    text-align: center;
+    /*Define o alinhamento vertical do conteúdo*/
+    vertical-align: bottom;
+}
+tr:hover{
+    background-color: #ffe5e5;
+}
+/*Display: é a mais importante propriedade CSS para controlar o layout. É usado para especificar como umelemento é apresentado em uma página web. A maioria dos elementos tem como valor padrão de dusplay block ou inline.*/
+/*Block: Um elemento em nível de bloco sempre começa em uma nova linha e ocupa a largura máxima disponível.*/
+/*Inline: Um elemento inline não inicia uma nova linha e apenas ocupa a largura que for necessária.*/
+div{
+    /*Exibe um elemento como um elemento em linha*/
+    display: inline;
+    /*Exibe um elemento como um elemento em bloco*/
+    display: block;
+    /*Exibe um elemento como um container flexível em nível de bloco*/
+    display: flex;
+    /*Permite definir a largura e a altura do elemento*/
+    display: inline-block;
+    /*Exibe um elemento como um container malha em nível de bloco*/
+    display: grid;
+    /*Não exibe o elemento. Obs.: a propriedade visibility com valor hidden também não exibe o elemento, contudo esta faz com que o elemento ainda ocupe espaço no layout, dieferente do display:none que "remove" o elemento do site*/
+    display: none;
+    /*Retorna a propriedade para o valor padrão*/
+    display: initial;
+    /*Herda a propriedade do seu elemento pai*/
+    display: inherit;
+}
+/*Position: especifica o tipo de método de posicionamento usado por um elemento (static, relative, fixed, absolute or sticky). Por padrão os elementos possuem position:static*/
+div.static{
+    /*Elementos estáticos não são afetados pelas propriedades top, bottom, left e right. Não são posicionados de forma especial, apenas seguem o fluxo da página*/
+    position: static;
+}
+div.relative{
+    /*O elemento passa a aceitar as propriedades Top, Bottom, Left, Right e Z-index. Com elas você pode alterar o posicionamento do elemento.*/
+    position: relative;
+}
+div.fixed{
+    /*Com o position fixed o elemento deixa de fazer parte do fluxo comum da página. Ele passa a se referenciar à janela do seu navegador, com isso permanece na tela indepente da rolagem da página*/
+    position: fixed;
+}
+div.absolute{
+    /*Com o position Absolute você pode posicionar qualquer elemento de acordo com o elemento pai que tenha um position diferente de static*/
+    position: absolute;
+}
+div.sticky{
+    /*É uma mistura de position: relative e position: fixed. Ele age posicionado relativamente até determinado ponto de rolagem. Então, ele age como um elemento com position: fixed*/
+    position: sticky;
+}
+/*Z-Index: especifica a ordem de fila de um elemento (qual elemento deve ser posicionado à frente ou atrás de outros)*/
+.black-box {
+    position: relative;
+    z-index: 1;
+    border: 2px solid black;
+    height: 100px;
+    margin: 30px;
+}
+
+.gray-box {
+    position: absolute;
+    z-index: 3;
+    background: lightgray;
+    height: 60px;
+    width: 70%;
+    left: 50px;
+    top: 50px;
+}
+/*Overflow: especifica se deve recortar o conteúdo ou adicionar uma barra de rolagem quando o conteúdo de um elemento for grande demais para caber em determinada área*/
+div{
+    /*Padrão. O transbordo não é cortado. O conteúdo renderiza fora da caixa do elemento*/
+    overflow: visible;
+    /*O transbordo é cortado e o resto do conteúdo ficará invisível*/
+    overflow: hidden;
+    /*O transbordo é cortado e uma barra de rolagem é adicionada para ver o restante do conteúdo*/
+    overflow: scroll;
+    /*Similar ao scroll, mas adiciona a barra de rolagem apenas quando necessário*/
+    overflow: auto;
+}
+/*Float: é usado para posicionar e formatar o conteúdo, por exemplo, deixar uma imagem flutuar à esquerda ou à direita do texto em um container.*/
+img {
+    float: right;
+    float: left;
+    float: none;
+}
+/*Clear: quando usamos a propriedade float em um elemento e queremos posicionar um outro elemento abaixo, usamos a propriedade clear no elemento seguinte, compatível com o valor da propriedade float anterior*/
+div{
+    clear: right;
+    clear: left;
+    clear: none;
+}
+/*Alinhamento de elementos*/
+/* Para elementos block, use o margin:auto */
+div {
+    margin: auto;
+    width: 50%;
+    border: 3px solid green;
+    padding: 10px;
+}
+/* Para alinhar apenas o texto interior do elemento, use o text-align */
+div {
+    text-align: center;
+    border: 3px solid green;
+}
+/* Para centralizar uma imagem, transforme em um elemento block e use o margin:auto */
+img {
+    display: block;
+    margin: 0 auto;
+    width: 40%;
+}
+/* Para alinhar usando o position */
+img {
+    position: absolute;
+    right: 0px;
+    width: 300px;
+    border: 3px solid #73AD21;
+    padding: 10px;
+}
+/* Para alinhar usando o float */
+img {
+    float: right;
+    width: 300px;
+    border: 3px solid #73AD21;
+    padding: 10px;
+}
+
+/*Opacity: especifica a opacidade/transparência de um elemento*/
+img {
+    opacity: 0.5;
+}
+
+/*Units: o CSS tem diversas unidades para expressar tamanho. Os valores são representados por um número e sua unidade. Por exemplo, 15px*/
+/* Existem dois tipos de unidades de medida: absolutas e relativas */
+/* Unidades absolutas são fixas e expressam a medida exata. Geralmente não são recomendadas para usar em telas, pois estas possuem diversos formatos e tamanhos. A unidade absoluta mais comum é a px(pixels) */
+/* Unidades relativas são variáveis de acordo com outra propriedade de tamanho. São melhor escaláveis do que as unidades absolutas. As unidades relativas mais comuns são:
+    - em: relativa ao tamanho da fonte do elemento pai;
+    - rem: relativa ao tamanho da fonte do elemento raiz(tag HTML);
+    - vw: relativa a 1% da largura da janela do navegador;
+    - vh: relativa a 1% da altura da janela do navegador;
+    - %: relativa ao elemento pai; */
+
 /**/
 /**/
 /**/
