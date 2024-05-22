@@ -80,6 +80,38 @@ p{
     background-position: center;
     /*Uma definição que agrupa as anteriores na seguinte ordem ->color->image->repeat->attachment->position. Não é necessário utilizar todas as anteriores */
     background: aquamarine url() no-repeat fixed center;
+    /*Define o tamanho do fundo do elemento*/
+    background-size: cover;
+}
+/*Filter: adiciona um efeito visual ao elemento*/
+img {
+    filter: grayscale(100%);
+}
+/*Object-fit e Object-position: usados para especificar como uma <img> ou um <video> deve ser redimensionado para caber no container e como deve ser posicionado em relação ao container, respectivamente*/
+img {
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    object-position: 80% 100%;
+}
+/*Mask: Permite criar uma camada de máscara sobre um elemento para esconder parcialmente ou totalmente partes do elemento*/
+.mask1 {
+    -webkit-mask-image: url(mask.png);
+    mask-image: url(mask.png);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+}
+.mask2 {
+    -webkit-mask-image: radial-gradient(circle, black 50%, rgba(0, 0, 0, 0.5) 50%);
+    mask-image: radial-gradient(circle, black 50%, rgba(0, 0, 0, 0.5) 50%);
+}
+.mask3 {
+    -webkit-mask-image: linear-gradient(black, transparent);
+    mask-image: linear-gradient(black, transparent);
+}
+/*Button: Podemos definir o comportamento do cursor ao passá-lo sobre o elemento*/
+button{
+    cursor: pointer;
 }
 /*Border: Podemos definir a borda de um elemento das seguintes formas*/
 div{
@@ -93,6 +125,8 @@ div{
     border: 5px solid green;
     /*Define o aredondamento da borda*/
     border-radius: 5px;
+    /*Define uma imagem para a borda*/
+    border-image: url();
 }
 /*Margin: usada para criar um espaço ao redor dos elementos, fora de qualquer borda definida*/
 p {
@@ -160,6 +194,14 @@ p{
     line-height: 2px;
     /*Define o sombreamento do texto*/
     text-shadow: 2px 2px;
+    /*Define o comportamento do texto excedente*/
+    text-overflow: clip;
+    /*Permite que palavras longas sejam quebradas e continuadas na próxima linha*/
+    word-wrap: break-word;
+    /*Define as regras da quebra de linha*/
+    word-break: break-all;
+    /*Define a orientação de escrita do texto*/
+    writing-mode: vertical-rl;
 }
 /*Fonts: existem algumas propriedades para formatas as fonts dos texto*/
 p{
@@ -172,6 +214,11 @@ p{
     font-style: italic;
     /*Podemos agrupar as definições através da propriedade font, onde size e family são obrigatórios*/
     font: italic small-caps bold 12px/30px Georgia, serif;
+}
+/*Web Fonts: permitem usar fontes que não estão instaladas no computador do usuário*/
+@font-face {
+  font-family: myFirstFont;
+  src: url(sansation_light.woff);
 }
 /*Links: podemos estilizar os links do site de um modo geral, usando o seletor a. Ou de acordo com o estado do link*/
 a{
@@ -376,7 +423,33 @@ img {
     - vh: relativa a 1% da altura da janela do navegador;
     - %: relativa ao elemento pai; */
 
-/**/
-/**/
-/**/
+/*Box Shadow: usado para aplicar uma ou mais sombras a um elemento*/
+div {
+    box-shadow: 10px 10px;
+}
+/*Transform 2D: permite mover, rotacionar, ampliar/reduzir e inclinar elementos*/
+div {
+    /*Permite mover o elemento*/
+    transform: translate(50px, 100px);
+    /*Permite rotacionar o elemento*/
+    transform: rotate(20deg);
+    /*Permite ampliar ou reduzir o tamanho do elemento*/
+    transform: scale(2, 3);
+    /*Permite inclinar o elemento*/
+    transform: skew(20deg, 10deg);
+    /*Transform 3D: ao utilizar o eixo Z, é possível realizar transformações 3D com as propriedades acima. */
+}
+/*Transitions: permite alterar os valores das propriedades suavemente, durante um determinado período*/
+div {
+    transition: width 2s, height 4s;
+}
+/*Animations: permite realizar a animação de elementos HTML sem utilizar JavaScript*/
+/* Definição da "função" de animação */
+@keyframes example {
+    from {background-color: red;}
+    to {background-color: yellow;}
+  }
+div {
+    animation: example 5s linear 2s infinite alternate;
+}
 /**/
