@@ -549,4 +549,30 @@ p{
     /*Engloba as propriedades grid-column-start, grid-column-end, grid-row-start e grid-row-end*/
     grid-area: 1 / 1 / 3 / 3;
 }
-/**/
+/*Design Responsivo: é realizar a estilização de forma que as páginas estejam bem apresentadas em todos os dispositivos. É tornar as páginas flexíveis e adaptáveis para uma melhor experiência do usuário*/
+/*Viewport: é a área visualizada pelo usuário. Varia de dispositivo para dispositivo*/
+/*Garantir que o padding e o border estão incluídos na largura e altura totais dos elementos*/
+* {
+    box-sizing: border-box;
+}
+/*Sempre realizar o design primeiro para o mobile. Isso irá fazer com que a página renderize mais rápido em dispositivos menores*/
+
+/*Principais breakpoints de dispositivos*/
+/* Dispositivos muito pequenos (telefones, 600px e abaixo) */
+@media only screen and (max-width: 600px) { }
+
+/* Pequenos dispositivos (tablets em modo retrato e telefones largos, 600px e acima) */
+@media only screen and (min-width: 600px) { }
+
+/* Dispositivos médios (tablets em modo paisagem, 768px e acima) */
+@media only screen and (min-width: 768px) { }
+
+/* Dispositivos grandes (notebooks/computadores, 992px e acima) */
+@media only screen and (min-width: 992px) { }
+
+/* Dispositivos maiores (notebooks grandes e computadores, 1200px e acima) */
+@media only screen and (min-width: 1200px) { }
+/*Utilizar medidas relativas para facilitar o design responsivo*/
+
+/*Existem diversos frameworks CSS gratuitos que oferecem um Design Responsivo. São bibliotecas que fornecem praticidade na estilização responsiva, através da atribuição de classes pré definidas que geram o comportamento desejado. Para utilizá-las, basta importar no head e consultar a documentação do framework de sua escolha*/
+/*Bootstrap, Tailwind, Foundation, Bulma, Skeleton, UIkit, Miligram*/
