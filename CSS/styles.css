@@ -452,4 +452,101 @@ div {
 div {
     animation: example 5s linear 2s infinite alternate;
 }
+/*Multi-column: permite uma fácil definição de múltiplas colunas de texto, como em umacoluna de jornal ou um blog*/
+div{
+    /*Especifica o número de colunas que o elemento deve ser dividido*/
+    column-count: 3;
+    /*Especifica o distanciamento entre as colunas*/
+    column-gap: 40px;
+    /*Especifica a largura, o estilo e a cor das divisórias entre as colunas*/
+    column-rule: 1px solid blue;
+    /*Especifica quantas colunas devem estar inseridas no span*/
+    column-span: all;
+    /*Especifica a largura de cada coluna*/
+    column-width: 100px;
+}
+/*Resize: especifica se e como um elemento pode ser redimensionado pelo usuário*/
+div {
+    resize: both;
+    overflow: auto;
+}
+/*Definição de variáveis*/
+:root {
+    --blue: #1e90ff;
+    --white: #ffffff;
+}
+a{
+    color: var(--blue);
+}
+/*Box-sizing: permite incluir o preenchimento e a borda na largura e altura total de um elemento*/
+* {
+    box-sizing: border-box;
+}
+/*@media: torna possível definir diferentes regras de estilização para diferentes tipos de mídias*/
+/* Tipos de mídias
+all:	Usado para todos os tipos de dispositivos de mídia;
+print:	Usado para prévia de modo de impressão;
+screen:	Usado para telas de computador, tablets, celulares e etc;
+*/
+/*Exemplo: telas com largura mínima de 480px terão lightgreen como a cor de fundo do site, sobreescrevendo a configuração anterior*/
+@media screen and (min-width: 480px) {
+    body {
+        background-color: lightgreen;
+    }
+}
+/*Flexbox: torna mais fácil construir estruturas com layout flexível e responsivo sem utilizar float ou position*/
+div{
+    display: flex;
+    /*Define em qual direção o container se quer enfileirar os flex items*/
+    flex-direction: column;
+    /*Especifica se os flex items devem ficar na linha ou podem ser deslocados para a próxima*/
+    flex-wrap: wrap;
+    /*Propriedade que engloba as propriedades flex-direction e flex-wrap*/
+    flex-flow: column wrap;
+    /*Usado para alinhar os items no eixo principal, definido pelo flex-direction*/
+    justify-content: center;
+    /*Usado para alinhar os items no eixo cruzado, inverso do definido pelo flex-direction*/
+    align-items: center;
+}
+/*Flex-items*/
+p{
+    /*flex-grow:	Especifica como o item irá crescer em relação aos items irmãos dentro do container;*/
+    flex-grow: 2;
+    /*flex-shrink:	Especifica como o item irá encolher em relação aos items irmãos dentro do container;*/
+    flex-shrink: 0;
+    /*flex-basis:	Especifica o tamanho inicial do item;*/
+    flex-basis: 20px;
+    /*flex:	Engloba as propriedades anteriores;*/
+    flex: 2 0 20px;
+    /*align-self:	Especifica o alinhamento do item;*/
+    align-self: center;
+    /*order:	Especifica a ordem do item dentro do container;*/
+    order: 8;
+}
+
+/*Grid: oferece um sistema de layout baseado em malha, com linhas e colunas, tornando mais fácil construir design de páginas web sem utilizar float ou position*/
+.grid-container {
+    display: grid;
+    /*Distanciamento entre as colunas*/
+    column-gap: 50px;
+    /*Distanciamento entre as linhas*/
+    row-gap: 50px;
+    gap: 50px;
+}
+.item1 {
+    /*Posiciona o item iniciando na linha 1 em relação às colunas*/
+    grid-column-start: 1;
+    /*Posiciona o item terminando na linha 3 em relação às colunas*/
+    grid-column-end: 3;
+    /*Engloba as propriedades anteriores*/
+    grid-column: 1/3;
+    /*Posiciona o item iniciando na linha 1 em relação às linhas*/
+    grid-row-start: 1;
+    /*Posiciona o item terminando na linha 3 em relação às linhas*/
+    grid-row-end: 3;
+    /*Engloba as propriedades anteriores*/
+    grid-row: 1/3;
+    /*Engloba as propriedades grid-column-start, grid-column-end, grid-row-start e grid-row-end*/
+    grid-area: 1 / 1 / 3 / 3;
+}
 /**/
