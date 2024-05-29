@@ -85,3 +85,66 @@ let teste_02 = "aprovando";
 //let e const tem block scope; var tem global scope.
 //let e const não podem ser redeclaradas; var pode ser redeclarada.
 //let e const precisam ser declaradas antes do uso; var pode ser declarada após o uso;
+
+
+//Operadores: usados para realizar diferentes tipos de operações lógicas e matemáticas
+//Operadores aritméticos: +, -, *, /, %, **
+//Casos de +
+let numeros = 2 + 2;  //No caso de números, + representa a soma
+let palavras = "Meu nome é " + "Jean" ; //Entre strings, é realizada a concatenação. A saída do exemplo seria (Meu nome é Jean)
+let palavraEnumero = "Número" + 2; //Quando inserimos uma string, é realizada a concatenação, ou seja, o agrupamento dos valores interpretando o number como uma string. No exemplo a saída é (Número2)
+
+//Casos de -
+let subNumeros = 2 - 2;  //No caso de números, - representa a subtração
+let subPalavraEnumero = "Número" - 2; //Quando inserimos uma string, não é possível usar o -. No exemplo a saída é (NaN, que significa Not a Number, pois o compilador espera que ambos os elementos sejam um número para realizar a subtração)
+//Para *(multiplicação), /(divisão), %(resto da divisão) e **(potenciação) o comportamento é o mesmo da subtração
+//Os operadores ++ e -- representam, respectivamente, incremento e decremento. Isto é:
+numeros ++;//Irá somar 1 ao valor atual da variável numeros
+console.log(numeros);
+numeros --;//Irá subtrair 1 do valor atual da variável numeros
+console.log(numeros);
+//Operadores de atribuição: =, +=, -=, *=, /=, %=, **=
+const num = 5;
+let atribuicao = num;//Atribui o valor da variável num à variável atribuicao
+atribuicao += 2;//Incrementa 2 ao valor atual da variável atribuicao
+console.log(atribuicao)
+atribuicao -= 3;//Decrementa 3 ao valor atual da variável atribuicao
+console.log(atribuicao)
+atribuicao *= 2;//Multiplica por 2 o valor atual da variável atribuicao
+console.log(atribuicao)
+atribuicao /= 3;//Divide por 3 o valor atual da variável atribuicao
+console.log(atribuicao)
+atribuicao %= 2;//Realiza a divisão da variável atribuição por 2 e atribui o resto da divisão à variável
+console.log(atribuicao)
+atribuicao **= 3;//Eleva o valor atual da variável atribuicao a 3
+console.log(atribuicao)
+//Operadores de comparação: ==, ===, !=, !==, >, <, >=, <=. Servem para numbers e strings
+let var1 = 4;
+let var2 = 5;
+let var3 = "4";
+let var4 = 4;
+console.log(var1 == var3)//Verifica se os valores das variáveis são iguais
+console.log(var1 === var4)//Verifica se os valores e os tipos das variáveis são iguais
+console.log(var1 != var4)//Verifica se os valores das variáveis são diferentes
+console.log(var1 !== var4)//Verifica se os valores e os tipos das variáveis são diferentes
+console.log(var1 > var4)//Verifica se o valor da primeira variável é maior que o valor da segunda
+console.log(var1 < var4)//Verifica se o valor da primeira variável é menor que o valor da segunda
+console.log(var1 >= var2)//Verifica se o valor da primeira variável é maior ou igual que o valor da segunda
+console.log(var1 <= var2)//Verifica se o valor da primeira variável é menor ou igual que o valor da segunda
+
+//Operadores logicos: &&, ||, !
+//Operador && representa "e", ambas as condições devem ser atendidas
+//Operador || representa "ou", uma das condições deve ser atendida
+//Operador ! representa "não", nega a condição adjascente. != é um exemplo, pode ser interpretado com diferente ou "não igual"
+
+//Funções: um bloco de código desenhado para realizar uma tarefa específica
+//Sintaxe
+function nomeDaFuncao(parametro1, parametro2, parametro3) {
+    // código a ser executado
+    let varTeste = 2;
+    return parametro1 + parametro2 + parametro3;
+  }
+console.log (nomeDaFuncao(1,2,3))//chamada da função
+console.log(varTeste);//Relembrando sobre escopo, a variável em questão não pode ser lida fora do escopo da função
+
+//Objetos: 
