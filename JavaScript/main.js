@@ -147,4 +147,59 @@ function nomeDaFuncao(parametro1, parametro2, parametro3) {
 console.log (nomeDaFuncao(1,2,3))//chamada da função
 console.log(varTeste);//Relembrando sobre escopo, a variável em questão não pode ser lida fora do escopo da função
 
-//Objetos: 
+//Objetos: uma coleção de propriedades associadas a um nome. Exemplo
+const pessoa = {
+    nome: 'João',
+    idade: 30,
+    cidade: 'São Paulo',
+    apresentarNome: function() {
+        return `Olá, eu sou o ${this.nome}!`;
+      }
+};
+//Outra forma de definir um objeto é declará-lo vazio e depois adicionar suas propriedades
+const carro ={};
+
+carro.marca = "Volto";
+carro.peso = 850;
+carro.cor = "Preto";
+
+//Caso queira remover uma propriedade, basta usar o comando delete
+delete pessoa.idade;
+console.log(pessoa)
+
+//É possível definir objetos dentro de outros objetos
+myObj = {
+    name:"John",
+    age:30,
+    myCars: {
+        car1:"Ford",
+        car2:"BMW",
+        car3:"Fiat"
+    }
+}
+
+//Em algumas ocaiões, precisamos criar vários objetos do mesmo tipo. Para isso, usamos funções construtoras. Exemplo
+function Pessoa(nome, sobrenome, idade){
+    this.nome = nome;
+    this.sobrenome = sobrenome;
+    this.idade = idade;
+}
+
+const jean = new Pessoa("Jean", "Almeida", 30)
+const thiago = new Pessoa("Thiago", "Almeida", 32)
+const thamara = new Pessoa("Thamara", "da Luz", 25)
+//Para adicionar uma propriedade, siga o modelo objeto["nomeDaPropriedade"]="valorDaPropriedade". Exemplo
+jean["nacionalidade"]="Brasileiro";
+
+//Métodos:  são ações que podem ser aplicadas a objetos. Neste trecho, nomeCompleto é um exemplo de método do objeto person
+const person = {
+    nome: "John",
+    sobrenome: "Doe",
+    id: 5566,
+    nomeCompleto: function() {
+        return this.nome + " " + this.sobrenome;
+    }
+};
+console.log(person.nomeCompleto()); //John Doe
+
+//Eventos: eventos JavaScript são ações que ocorrem em resposta a um determinado "gatilho"

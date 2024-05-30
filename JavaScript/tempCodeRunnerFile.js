@@ -1,7 +1,13 @@
-function nomeDaFuncao(parametro1, parametro2, parametro3) {
-    // código a ser executado
-    let varTeste = 2;
-    return parametro1 + parametro2 + parametro3;
-  }
-console.log (nomeDaFuncao(1,2,3))//chamada da função
-console.log(nomeDaFuncao.varTeste);//Relembrando sobre escopo, a variável em questão não pode ser lida fora do escopo da função
+function Pessoa(nome, sobrenome, idade){
+    this.nome = nome;
+    this.sobrenome = sobrenome;
+    this.idade = idade;
+}
+
+const jean = new Pessoa("Jean", "Almeida", 30)
+const thiago = new Pessoa("Thiago", "Almeida", 32)
+const thamara = new Pessoa("Thamara", "da Luz", 25)
+
+jean["nacionalidade"]="Brasileiro";
+console.log(jean)
+console.log(thamara)
